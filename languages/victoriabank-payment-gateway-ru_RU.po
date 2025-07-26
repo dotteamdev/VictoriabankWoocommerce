@@ -469,3 +469,54 @@ msgstr "Ваш заказ на %s был частично возмещен. Бо
 #: utils/email/order-refunded.php:35
 msgid "Your order on %s has been refunded. There are more details below for your reference:"
 msgstr "Ваш заказ на %s был возвращен. Более подробная информация приведена ниже для справки:"
+
+msgid "Email Customization"
+msgstr "Настройка электронной почты"
+
+msgid "Order Confirmation Email Subject"
+msgstr "Тема письма подтверждения заказа"
+
+msgid "Order Confirmation Email Additional Content"
+msgstr "Дополнительное содержание письма подтверждения заказа"
+
+msgid "Refund Email Subject"
+msgstr "Тема письма о возврате"
+
+msgid "Refund Email Additional Content"
+msgstr "Дополнительное содержание письма о возврате"
+
+msgid "Hide WooCommerce promotional text from emails"
+msgstr "Скрыть рекламный текст WooCommerce из писем"
+
+msgid "Leave empty for default: [Country] MerchantName: New order #OrderNumber"
+msgstr "Оставьте пустым для стандартного: [Страна] НазваниеТорговца: Новый заказ #НомерЗаказа"
+
+msgid "Custom subject for order confirmation emails. Use placeholders: {merchant_name}, {order_number}, {country}"
+msgstr "Пользовательская тема для писем подтверждения заказа. Используйте заполнители: {merchant_name}, {order_number}, {country}"
+
+msgid "Custom content to add at the end of confirmation emails"
+msgstr "Пользовательское содержание для добавления в конце писем подтверждения"
+
+msgid "HTML is allowed. Leave empty to use default content. Use placeholders: {merchant_name}, {merchant_url}, {return_policy}, {customer_service}"
+msgstr "HTML разрешен. Оставьте пустым для использования содержания по умолчанию. Используйте заполнители: {merchant_name}, {merchant_url}, {return_policy}, {customer_service}"
+
+msgid "Leave empty for default subject"
+msgstr "Оставьте пустым для темы по умолчанию"
+
+msgid "Custom subject for refund emails. Use placeholders: {merchant_name}, {order_number}"
+msgstr "Пользовательская тема для писем о возврате. Используйте заполнители: {merchant_name}, {order_number}"
+
+msgid "Custom content to add at the end of refund emails"
+msgstr "Пользовательское содержание для добавления в конце писем о возврате"
+
+msgid "HTML is allowed. Use placeholders: {merchant_name}, {return_policy}, {customer_service}"
+msgstr "HTML разрешен. Используйте заполнители: {merchant_name}, {return_policy}, {customer_service}"
+
+msgid "Removes \"Process your orders on the go. Get the app\" text from emails"
+msgstr "Удаляет текст \"Обрабатывайте заказы на ходу. Получите приложение\" из писем"
+
+msgid "Logo Settings"
+msgstr "Настройки логотипа"
+
+msgid "Enable logo"
+msgstr "Включить логотип"

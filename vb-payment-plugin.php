@@ -4,8 +4,8 @@
  * Text Domain: victoriabank-payment-gateway
  * Domain Path: /languages/
  * Description: Plugin for adding to your WooCommerce shop Victoriabank payments.
- * Author: Victoriabank
- * Author URI: https://www.victoriabank.md/
+ * Author: Dan Oistric
+ * Author URI: https://victoriabank.md/
  * Version: 1.0.0
  */
 
@@ -32,6 +32,72 @@ require_once(plugin_dir_path( __FILE__ ).'/utils/actions.php');
 require_once(plugin_dir_path( __FILE__ ).'/utils/trtypes.php');
 
 const PLUGIN_DIR = ABSPATH . 'wp-content/plugins/vb-payment-plugin';
+
+// Email customization functions
+function get_custom_email_subject($type, $order, $default_subject) {
+    $custom_subject = get_merchant_data("Email {$type} subject");
+    
+    if (empty($custom_subject)) {
+        return $default_subject;
+    }
+    
+    $merchant_name = get_merchant_data('Merchant name');
+    $country = WC()->countries->get_base_country();
+    
+    $placeholders = array(
+        '{merchant_name}' => $merchant_name,
+        '{order_number}' => $order->get_order_number(),
+        '{country}' => $country
+    );
+    
+    return str_replace(array_keys($placeholders), array_values($placeholders), $custom_subject);
+}
+
+function get_custom_email_content($type) {
+    $custom_content = get_merchant_data("Email {$type} content");
+    $hide_woocommerce_promo = get_merchant_data('Hide WooCommerce promotion');
+    
+    if (empty($custom_content)) {
+        // Use default content but check if we should hide WooCommerce promotion
+        $merchant_name = get_merchant_data('Merchant name');
+        $merchant_url = get_merchant_data('Merchant URL');
+        $return_policy = get_merchant_data('Return/refund policy URL');
+        $customer_service = get_merchant_data('Customer service contact');
+        $country = WC()->countries->get_base_country();
+        $full_country_name = WC()->countries->countries[$country];
+        
+        if ($type === 'confirmation') {
+            $default_content = __('Congratulations on the sale. You are welcome to', 'victoriabank-payment-gateway') . ' <a href="' . $merchant_url . '">' . $merchant_name . '</a> (' . $full_country_name . 
+                __(')<br><br> If you aren\'t satisfied in good quality you can return it by this ', 'victoriabank-payment-gateway') . '<a href="'. $return_policy . '">' . __('return/refund policy', 'victoriabank-payment-gateway') . '</a>' .
+                __('.<br><br> Also if you need another help contact us - <b>', 'victoriabank-payment-gateway') . $customer_service . '</b>';
+            
+            // Add WooCommerce promotion only if not hidden
+            if ($hide_woocommerce_promo !== 'on') {
+                $default_content .= __('.<br><br> Process your orders on the go. <a href="https://woocommerce.com/mobile">Get the app</a>', 'victoriabank-payment-gateway');
+            }
+            
+            return $default_content;
+        } else {
+            // For refund emails, no default promotional content
+            return '';
+        }
+    }
+    
+    // Replace placeholders in custom content
+    $merchant_name = get_merchant_data('Merchant name');
+    $merchant_url = get_merchant_data('Merchant URL');
+    $return_policy = get_merchant_data('Return/refund policy URL');
+    $customer_service = get_merchant_data('Customer service contact');
+    
+    $placeholders = array(
+        '{merchant_name}' => $merchant_name,
+        '{merchant_url}' => $merchant_url,
+        '{return_policy}' => $return_policy,
+        '{customer_service}' => $customer_service
+    );
+    
+    return str_replace(array_keys($placeholders), array_values($placeholders), $custom_content);
+}
 
 function enqueue_styles() {
   wp_enqueue_style( 'general_settings_style', plugins_url('settings.css', __FILE__));
@@ -697,7 +763,10 @@ function handle_callback_request() {
           $encryption_type = get_merchant_data('Encryption method');
 
           $template = 'emails/customer-processing-order.php';
-          $subject = '[' . $country . '] ' . $merchant_name . __(': New order #', 'victoriabank-payment-gateway') . ltrim($callbackData['ORDER'], '0');
+          $default_subject = '[' . $country . '] ' . $merchant_name . __(': New order #', 'victoriabank-payment-gateway') . ltrim($callbackData['ORDER'], '0');
+          $subject = get_custom_email_subject('confirmation', $order, $default_subject);
+          $additional_content = get_custom_email_content('confirmation');
+          
           $content = wc_get_template_html($template, array(
               'order' => $order,
               'email_heading' => $subject,
@@ -711,11 +780,7 @@ function handle_callback_request() {
               'email' => $order->get_billing_email(),
               'sent_to_admin' => true,
               'plain_text' => '',
-              'additional_content' => 
-                __('Congratulations on the sale. You are welcome to', 'victoriabank-payment-gateway') . ' <a href="' . $merchant_url . '">' . $merchant_name . '</a> (' . $full_country_name . 
-                __(')<br><br> If you aren\'t satisfied in good quality you can return it by this ', 'victoriabank-payment-gateway') . '<a href="'. $return_policy . '">' . __('return/refund policy', 'victoriabank-payment-gateway') . '</a>' .
-                __('.<br><br> Also if you need another help contact us - <b>', 'victoriabank-payment-gateway') . $customer_service . 
-                __('<b>.<br><br> Process your orders on the go. <a href="https://woocommerce.com/mobile">Get the app</a>', 'victoriabank-payment-gateway'),
+              'additional_content' => $additional_content,
           ));
 
           $mailer->send($order->get_billing_email(), $subject, $content);
@@ -868,6 +933,34 @@ function disable_default_email($recipient, $order) {
     }
 
     return $recipient;
+}
+
+// Customize refund email subject
+add_filter('woocommerce_email_subject_customer_refunded_order', 'customize_refund_email_subject', 10, 2);
+
+function customize_refund_email_subject($subject, $order) {
+    $payment_method = $order->get_payment_method();
+    
+    if ($payment_method === 'vb_visa_mastercard' || $payment_method === 'vb_star_card_rate' || $payment_method === 'vb_puncte_star') {
+        $custom_subject = get_custom_email_subject('refund', $order, $subject);
+        return $custom_subject;
+    }
+    
+    return $subject;
+}
+
+// Customize refund email content
+add_filter('woocommerce_email_additional_content_customer_refunded_order', 'customize_refund_email_content', 10, 3);
+
+function customize_refund_email_content($additional_content, $order, $email) {
+    $payment_method = $order->get_payment_method();
+    
+    if ($payment_method === 'vb_visa_mastercard' || $payment_method === 'vb_star_card_rate' || $payment_method === 'vb_puncte_star') {
+        $custom_content = get_custom_email_content('refund');
+        return !empty($custom_content) ? $custom_content : $additional_content;
+    }
+    
+    return $additional_content;
 }
 
 function update_page_content_by_title() {

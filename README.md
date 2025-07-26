@@ -1,6 +1,6 @@
 # WooCommerce Victoriabank Payments
 
-Contributors: Victoriabank
+Contributors: Dan Oistric
 Tags: WooCommerce, Moldova, Victoriabank, VB, bank, payment, gateway, visa, mastercard, credit card
 Requires at least: 6.0
 Tested up to: 6.3.1

@@ -176,3 +176,76 @@ function logo_name($key) {
 }
 
 ?>
+
+<h3><?php echo __('Logo Settings', 'victoriabank-payment-gateway'); ?></h3>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="setting-field">
+        <label for="logo_visa_mastercard"><?php echo __('Logo for Visa/Mastercard', 'victoriabank-payment-gateway')?>:</label>
+        <input type="file" accept="image/*" id="logo_visa_mastercard" name="logo_visa_mastercard_field">
+        <label>
+            <input type="checkbox" name="enable_logo_visa_mastercard_field" value="on" <?php echo get_payment_data('Enable logo for Visa/Mastercard') === 'on' ? 'checked' : ''; ?>>
+            <?php echo __('Enable logo', 'victoriabank-payment-gateway'); ?>
+        </label>
+    </div>
+    
+    <div class="setting-field">
+        <label for="logo_star_card_rate"><?php echo __('Logo for Star Card Rate', 'victoriabank-payment-gateway')?>:</label>
+        <input type="file" accept="image/*" id="logo_star_card_rate" name="logo_star_card_rate_field">
+        <label>
+            <input type="checkbox" name="enable_logo_star_card_rate_field" value="on" <?php echo get_payment_data('Enable logo for Star Card Rate') === 'on' ? 'checked' : ''; ?>>
+            <?php echo __('Enable logo', 'victoriabank-payment-gateway'); ?>
+        </label>
+    </div>
+    
+    <div class="setting-field">
+        <label for="logo_puncte_star"><?php echo __('Logo for Puncte Star', 'victoriabank-payment-gateway')?>:</label>
+        <input type="file" accept="image/*" id="logo_puncte_star" name="logo_puncte_star_field">
+        <label>
+            <input type="checkbox" name="enable_logo_puncte_star_field" value="on" <?php echo get_payment_data('Enable logo for Puncte Star') === 'on' ? 'checked' : ''; ?>>
+            <?php echo __('Enable logo', 'victoriabank-payment-gateway'); ?>
+        </label>
+    </div>
+
+    <h3><?php echo __('Email Customization', 'victoriabank-payment-gateway'); ?></h3>
+    
+    <div class="setting-field">
+        <label for="email_confirmation_subject"><?php echo __('Order Confirmation Email Subject', 'victoriabank-payment-gateway')?>:</label>
+        <input type="text" class="regular-text" id="email_confirmation_subject" name="email_confirmation_subject_field" 
+               value="<?php echo esc_attr($_POST["email_confirmation_subject_field"] ?? get_payment_data('Email confirmation subject') ?? ''); ?>" 
+               placeholder="<?php echo __('Leave empty for default: [Country] MerchantName: New order #OrderNumber', 'victoriabank-payment-gateway'); ?>">
+        <p class="description"><?php echo __('Custom subject for order confirmation emails. Use placeholders: {merchant_name}, {order_number}, {country}', 'victoriabank-payment-gateway'); ?></p>
+    </div>
+
+    <div class="setting-field">
+        <label for="email_confirmation_content"><?php echo __('Order Confirmation Email Additional Content', 'victoriabank-payment-gateway')?>:</label>
+        <textarea class="large-text" rows="6" id="email_confirmation_content" name="email_confirmation_content_field" 
+                  placeholder="<?php echo __('Custom content to add at the end of confirmation emails', 'victoriabank-payment-gateway'); ?>"><?php echo esc_textarea($_POST["email_confirmation_content_field"] ?? get_payment_data('Email confirmation content') ?? ''); ?></textarea>
+        <p class="description"><?php echo __('HTML is allowed. Leave empty to use default content. Use placeholders: {merchant_name}, {merchant_url}, {return_policy}, {customer_service}', 'victoriabank-payment-gateway'); ?></p>
+    </div>
+
+    <div class="setting-field">
+        <label for="email_refund_subject"><?php echo __('Refund Email Subject', 'victoriabank-payment-gateway')?>:</label>
+        <input type="text" class="regular-text" id="email_refund_subject" name="email_refund_subject_field" 
+               value="<?php echo esc_attr($_POST["email_refund_subject_field"] ?? get_payment_data('Email refund subject') ?? ''); ?>" 
+               placeholder="<?php echo __('Leave empty for default subject', 'victoriabank-payment-gateway'); ?>">
+        <p class="description"><?php echo __('Custom subject for refund emails. Use placeholders: {merchant_name}, {order_number}', 'victoriabank-payment-gateway'); ?></p>
+    </div>
+
+    <div class="setting-field">
+        <label for="email_refund_content"><?php echo __('Refund Email Additional Content', 'victoriabank-payment-gateway')?>:</label>
+        <textarea class="large-text" rows="4" id="email_refund_content" name="email_refund_content_field" 
+                  placeholder="<?php echo __('Custom content to add at the end of refund emails', 'victoriabank-payment-gateway'); ?>"><?php echo esc_textarea($_POST["email_refund_content_field"] ?? get_payment_data('Email refund content') ?? ''); ?></textarea>
+        <p class="description"><?php echo __('HTML is allowed. Use placeholders: {merchant_name}, {return_policy}, {customer_service}', 'victoriabank-payment-gateway'); ?></p>
+    </div>
+
+    <div class="setting-field">
+        <label>
+            <input type="checkbox" name="hide_woocommerce_promotion_field" value="on" <?php echo get_payment_data('Hide WooCommerce promotion') === 'on' ? 'checked' : ''; ?>>
+            <?php echo __('Hide WooCommerce promotional text from emails', 'victoriabank-payment-gateway'); ?>
+        </label>
+        <p class="description"><?php echo __('Removes "Process your orders on the go. Get the app" text from emails', 'victoriabank-payment-gateway'); ?></p>
+    </div>
+
+    <input type="submit" value="<?php echo __('Submit', 'victoriabank-payment-gateway')?>" name="submit_payment_settings">
+</form>

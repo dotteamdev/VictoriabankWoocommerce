@@ -469,3 +469,54 @@ msgstr "Comanda dvs. de pe %s a fost rambursată parțial. Mai multe detalii mai
 #: utils/email/order-refunded.php:35
 msgid "Your order on %s has been refunded. There are more details below for your reference:"
 msgstr "Comanda dvs. de pe %s a fost rambursată. Mai multe detalii mai jos pentru referință:"
+
+msgid "Email Customization"
+msgstr "Personalizare Email"
+
+msgid "Order Confirmation Email Subject"
+msgstr "Subiectul Email-ului de Confirmare Comandă"
+
+msgid "Order Confirmation Email Additional Content"
+msgstr "Conținut Adițional Email Confirmare Comandă"
+
+msgid "Refund Email Subject"
+msgstr "Subiectul Email-ului de Rambursare"
+
+msgid "Refund Email Additional Content"
+msgstr "Conținut Adițional Email Rambursare"
+
+msgid "Hide WooCommerce promotional text from emails"
+msgstr "Ascunde textul promoțional WooCommerce din email-uri"
+
+msgid "Leave empty for default: [Country] MerchantName: New order #OrderNumber"
+msgstr "Lasă gol pentru default: [Țară] NumeComerciant: Comandă nouă #NumărComandă"
+
+msgid "Custom subject for order confirmation emails. Use placeholders: {merchant_name}, {order_number}, {country}"
+msgstr "Subiect personalizat pentru email-urile de confirmare comandă. Folosește placeholder-uri: {merchant_name}, {order_number}, {country}"
+
+msgid "Custom content to add at the end of confirmation emails"
+msgstr "Conținut personalizat de adăugat la sfârșitul email-urilor de confirmare"
+
+msgid "HTML is allowed. Leave empty to use default content. Use placeholders: {merchant_name}, {merchant_url}, {return_policy}, {customer_service}"
+msgstr "HTML este permis. Lasă gol pentru conținutul implicit. Folosește placeholder-uri: {merchant_name}, {merchant_url}, {return_policy}, {customer_service}"
+
+msgid "Leave empty for default subject"
+msgstr "Lasă gol pentru subiectul implicit"
+
+msgid "Custom subject for refund emails. Use placeholders: {merchant_name}, {order_number}"
+msgstr "Subiect personalizat pentru email-urile de rambursare. Folosește placeholder-uri: {merchant_name}, {order_number}"
+
+msgid "Custom content to add at the end of refund emails"
+msgstr "Conținut personalizat de adăugat la sfârșitul email-urilor de rambursare"
+
+msgid "HTML is allowed. Use placeholders: {merchant_name}, {return_policy}, {customer_service}"
+msgstr "HTML este permis. Folosește placeholder-uri: {merchant_name}, {return_policy}, {customer_service}"
+
+msgid "Removes \"Process your orders on the go. Get the app\" text from emails"
+msgstr "Elimină textul \"Procesează comenzile în mișcare. Descarcă aplicația\" din email-uri"
+
+msgid "Logo Settings"
+msgstr "Setări Logo"
+
+msgid "Enable logo"
+msgstr "Activează logo"
