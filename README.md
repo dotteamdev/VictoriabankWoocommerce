@@ -11,24 +11,17 @@ License URI: <https://www.gnu.org/licenses/gpl-3.0.html>
 
 Plugin pentru plăți Victoriabank în magazinele WooCommerce.
 
-== Descriere ==
-Scopul este să ofere comercianților o soluție template care împreună cu un set de instrucțiuni va permite comerciantului să se conecteze ușor la sistemul de plăți BC Victoriabank cu 3 metode de plată:
-
 1. **Card Visa/Mastercard (acceptă toate cardurile Visa sau Mastercard)**
 2. **Star Card Rate (acceptă doar cardurile Star emise de BC Victoriabank)**
 3. **Star Points (acceptă doar cardurile Star emise de BC Victoriabank)**
 
 Scopul este să faciliteze procesul de integrare în sistemul de plăți BC Victoriabank.
 
-= Caracteristici =
-
 * Tipuri de tranzacții de card `Authorization` și `Charge`
 * Tranzacții `Reversal` – rambursări parțiale sau complete
 * Tranzacții `Sales completion` – finalizează tranzacțiile autorizate
 * Email de confirmare a comenzii cu detaliile tranzacției de card
 * Gratuit de utilizat – [Licență open-source GPL-3.0 pe GitHub](https://github.com/cyberink-co/vb-payment-plugin)
-
-== Instalare Pas cu Pas ==
 
 ### Cerințe Preliminare
 
@@ -124,8 +117,6 @@ Când testarea este completă:
 1. Actualizați setările de conectare pentru mediul de producție
 2. Înlocuiți URL-urile de test cu cele de producție
 3. Verificați că toate datele comerciantului sunt corecte
-
-== Depanare ==
 
 ### Probleme Comune
 
