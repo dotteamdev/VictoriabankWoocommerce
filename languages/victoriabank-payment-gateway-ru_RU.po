@@ -1,0 +1,474 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-05-26 03:34+0300\n"
+"PO-Revision-Date: 2023-05-29 14:22+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: vb-payment-plugin.php\n"
+"X-Poedit-SearchPath-1: forms\n"
+"X-Poedit-SearchPath-2: payment-types\n"
+"X-Poedit-SearchPath-3: utils\n"
+
+msgid "Bon electronic"
+msgstr "Электронный чек"
+
+#: forms/connection-form.php:3
+msgid "Public key"
+msgstr "Открытый ключ"
+
+#: forms/connection-form.php:7
+msgid "Bank public key"
+msgstr "Открытый ключ банка"
+
+#: forms/connection-form.php:11
+msgid "Private key"
+msgstr "Закрытый ключ"
+
+#: forms/connection-form.php:15
+msgid "Private Key Password"
+msgstr "Пароль секретного ключа"
+
+#: forms/connection-form.php:19
+msgid "Encryption method"
+msgstr "Метод шифрования"
+
+#: forms/connection-form.php:30 forms/merchant-form.php:23
+#: forms/notification-form.php:7
+msgid "Submit"
+msgstr "Сохранить"
+
+#: forms/manually-process-form.php:2
+msgid "Manually process callback data"
+msgstr "Вручную обрабатывать данные обратного вызова"
+
+#: forms/manually-process-form.php:39
+msgid "Process"
+msgstr "Выполнить"
+
+#: forms/manually-process-form.php:83 vb-payment-plugin.php:317
+msgid " Transaction \"Sales completion\" was made successfully"
+msgstr " Транзакция \"Sales completion\" успешно проведена"
+
+#: forms/manually-process-form.php:86 vb-payment-plugin.php:321
+msgid " Transaction \"Refund\" was made successfully"
+msgstr " Транзакция \"Refund\" успешно проведена"
+
+#: forms/manually-process-form.php:128 vb-payment-plugin.php:367
+msgid " Error: "
+msgstr " Ошибка: "
+
+#: forms/manually-process-form.php:130
+msgid "Transaction failed"
+msgstr "Транзакция не прошла"
+
+#: forms/manually-process-form.php:136
+msgid "Transaction was made successfully, you can check result on the email"
+msgstr "Транзакция прошла успешно, вы можете проверить результат по электронной почте"
+
+#: forms/merchant-form.php:3
+msgid "Merchant name"
+msgstr "Имя продавца"
+
+#: forms/merchant-form.php:7
+msgid "Merchant URL"
+msgstr "URL продавца"
+
+#: forms/merchant-form.php:11
+msgid "Merchant address"
+msgstr "Адрес продавца"
+
+#: forms/merchant-form.php:15
+msgid "Return/refund policy URL"
+msgstr "URL политики возврата/возврата"
+
+#: forms/merchant-form.php:19
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:11
+msgid "Customer service contact"
+msgstr "Контакт связи со службой поддержки"
+
+#: forms/notification-form.php:4
+msgid "Callback URL"
+msgstr "URL-адрес обратного вызова"
+
+#: forms/payment-settings-form.php:3
+msgid "Logo for Visa/Mastercard"
+msgstr "Логотип для Visa/Mastercard"
+
+#: forms/payment-settings-form.php:7
+msgid "Logo for Star Card Rate"
+msgstr "Логотип для Star Card Rate"
+
+#: forms/payment-settings-form.php:11
+msgid "Logo for Puncte Star"
+msgstr "Логотип для Puncte Star"
+
+#: payment-types/vb-puncte-star.php:18
+msgid "WooCommerce Payment Gateway for Victoriabank Puncte Star"
+msgstr "Платёжный шлюз Woocommerce для Victoriabank Puncte Star"
+
+#: payment-types/vb-puncte-star.php:42 payment-types/vb-star-card-rate.php:43
+#: payment-types/vb-visa-master.php:42
+msgid "Activate/Deactivate"
+msgstr "Активировать/деактивировать"
+
+#: payment-types/vb-puncte-star.php:45 payment-types/vb-star-card-rate.php:46
+#: payment-types/vb-visa-master.php:45
+msgid "Check box activate this payment method"
+msgstr "Флажок Активировать этот способ оплаты"
+
+#: payment-types/vb-puncte-star.php:49 payment-types/vb-star-card-rate.php:50
+#: payment-types/vb-visa-master.php:49
+msgid "Title"
+msgstr "Название"
+
+#: payment-types/vb-puncte-star.php:51 payment-types/vb-star-card-rate.php:60
+#: payment-types/vb-visa-master.php:51
+msgid "The title of the payment method shown to the customer during checkout"
+msgstr "Название способа оплаты, отображаемое покупателю при оформлении заказа"
+
+#: payment-types/vb-puncte-star.php:55 payment-types/vb-star-card-rate.php:64
+#: payment-types/vb-visa-master.php:55
+msgid "Description"
+msgstr "Описание"
+
+#: payment-types/vb-puncte-star.php:57 payment-types/vb-star-card-rate.php:66
+#: payment-types/vb-visa-master.php:57
+msgid "Description of the payment method displayed to the customer during checkout"
+msgstr "Описание способа оплаты, показанное покупателю во время оформления заказа"
+
+#: payment-types/vb-puncte-star.php:61 payment-types/vb-star-card-rate.php:70
+#: payment-types/vb-visa-master.php:61
+msgid "Logo"
+msgstr "Логотип"
+
+#: payment-types/vb-puncte-star.php:63 payment-types/vb-star-card-rate.php:72
+#: payment-types/vb-visa-master.php:64
+msgid "Logo of the payment method displayed to the customer during checkout"
+msgstr "Логотип способа оплаты, отображаемый покупателю во время оплаты"
+
+#: payment-types/vb-puncte-star.php:67 payment-types/vb-star-card-rate.php:76
+#: payment-types/vb-visa-master.php:68
+msgid "Terminal id"
+msgstr "ID терминала"
+
+#: payment-types/vb-puncte-star.php:69 payment-types/vb-star-card-rate.php:78
+#: payment-types/vb-visa-master.php:70
+msgid "This is id of payment terminal"
+msgstr "Это идентификатор платежного терминала"
+
+#: payment-types/vb-puncte-star.php:73 payment-types/vb-star-card-rate.php:82
+#: payment-types/vb-visa-master.php:74
+msgid "Merchant id"
+msgstr "ID продавца"
+
+#: payment-types/vb-puncte-star.php:75 payment-types/vb-star-card-rate.php:84
+#: payment-types/vb-visa-master.php:76
+msgid "This is id of merchant"
+msgstr "Это идентификатор продавца"
+
+#: payment-types/vb-puncte-star.php:79 payment-types/vb-star-card-rate.php:88
+#: payment-types/vb-visa-master.php:80
+msgid "Test mode"
+msgstr "Тестовый режим"
+
+#: payment-types/vb-puncte-star.php:80 payment-types/vb-star-card-rate.php:89
+#: payment-types/vb-visa-master.php:81
+msgid "Enable Test Mode"
+msgstr "Активировать тестовый режим"
+
+#: payment-types/vb-puncte-star.php:83 payment-types/vb-star-card-rate.php:92
+#: payment-types/vb-visa-master.php:84
+msgid "Check box activate test mode"
+msgstr "Флажок активирует тестовый режим"
+
+#: payment-types/vb-puncte-star.php:87 payment-types/vb-star-card-rate.php:96
+#: payment-types/vb-visa-master.php:88
+msgid "Debug mode"
+msgstr "Режим отладки"
+
+#: payment-types/vb-puncte-star.php:88 payment-types/vb-star-card-rate.php:97
+#: payment-types/vb-visa-master.php:89
+msgid "Enable Debug Mode"
+msgstr "Активировать режим отладки"
+
+#: payment-types/vb-puncte-star.php:91 payment-types/vb-star-card-rate.php:100
+#: payment-types/vb-visa-master.php:92
+msgid "Check box activate debug mode"
+msgstr "Флажок активирует режим отладки"
+
+#: payment-types/vb-puncte-star.php:95 payment-types/vb-star-card-rate.php:104
+#: payment-types/vb-visa-master.php:96
+msgid "Transaction type"
+msgstr "Тип транзакции"
+
+#: payment-types/vb-puncte-star.php:99 payment-types/vb-star-card-rate.php:108
+#: payment-types/vb-visa-master.php:100
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: payment-types/vb-puncte-star.php:100 payment-types/vb-star-card-rate.php:109
+#: payment-types/vb-visa-master.php:101
+msgid "Charge"
+msgstr "Плата немедленно"
+
+#: payment-types/vb-puncte-star.php:102 payment-types/vb-star-card-rate.php:111
+#: payment-types/vb-visa-master.php:103
+msgid ""
+"Selects how payments will be processed. Charge immediately sends all transactions "
+"to the bank for settlement, Authorization only authorizes the order amount to the "
+"bank for later settlement."
+msgstr ""
+"Выбирает, как будут обрабатываться платежи. Плата немедленно отправляет все "
+"транзакции в банк для расчета, Авторизация только авторизует сумму заказа в банк "
+"для последующего расчета."
+
+#: payment-types/vb-puncte-star.php:106 payment-types/vb-star-card-rate.php:115
+#: payment-types/vb-visa-master.php:107
+msgid "Order description"
+msgstr "Описание заказа"
+
+#: payment-types/vb-puncte-star.php:108 payment-types/vb-star-card-rate.php:117
+#: payment-types/vb-visa-master.php:109
+msgid ""
+"Description of the order shown to the customer on the bank's page during payment"
+msgstr "Описание заказа, отображаемое покупателю на странице банка при оплате"
+
+#: payment-types/vb-star-card-rate.php:19
+msgid "WooCommerce Payment Gateway for Victoriabank Star Card Rate"
+msgstr "Платёжный шлюз Woocommerce для Victoriabank Star Card Rate"
+
+#: payment-types/vb-star-card-rate.php:54
+msgid "Pay 2 installments"
+msgstr "Оплата в 2 платежа"
+
+#: payment-types/vb-star-card-rate.php:55
+msgid "Pay 3 installments"
+msgstr "Оплата в 3 платежа"
+
+#: payment-types/vb-star-card-rate.php:56
+msgid "Pay 6 installments"
+msgstr "Оплата в 6 платежей"
+
+#: payment-types/vb-star-card-rate.php:57
+msgid "Pay 9 installments"
+msgstr "Оплата в 9 платежей"
+
+#: payment-types/vb-star-card-rate.php:58
+msgid "Pay 12 installments"
+msgstr "Оплата в 12 платежей"
+
+#: payment-types/vb-visa-master.php:18
+msgid "WooCommerce Payment Gateway for Victoriabank Visa/MasterCard"
+msgstr "Платёжный шлюз Woocommerce для Victoriabank Visa/MasterCard"
+
+#: utils/activity-logger/activity-log-page.php:5
+#: utils/activity-logger/activity-log-page.php:6
+msgid "Activity Log"
+msgstr "Журнал активности"
+
+#: utils/activity-logger/activity-log-page.php:59
+#: utils/activity-logger/activity-log-page.php:88
+#: utils/activity-logger/activity-log-page.php:117
+msgid "Activity"
+msgstr "Действие"
+
+#: utils/activity-logger/activity-log-page.php:60
+#: utils/activity-logger/activity-log-page.php:89
+#: utils/activity-logger/activity-log-page.php:118
+msgid "Timestamp"
+msgstr "Время происходящего"
+
+#: utils/activity-logger/activity-log-page.php:74
+#: utils/activity-logger/activity-log-page.php:103
+#: utils/activity-logger/activity-log-page.php:132
+msgid "No log data for this payment type"
+msgstr "Нет данных журнала для этого типа платежа"
+
+#: utils/activity-logger/activity-log-page.php:141
+msgid "Previous"
+msgstr "Предыдущая"
+
+#: utils/activity-logger/activity-log-page.php:143
+msgid "Next"
+msgstr "Следующая"
+
+#: utils/activity-logger/activity-logger.php:14
+msgid "Order created: #"
+msgstr "Заказ создан: #"
+
+#: utils/activity-logger/activity-logger.php:15
+msgid " Order added amount: "
+msgstr " Добавленная сумма заказа: "
+
+#: utils/activity-logger/activity-logger.php:16
+msgid " Order added billing name: "
+msgstr " В заказ добавлено платежное имя: "
+
+#: utils/activity-logger/activity-logger.php:17
+msgid " Order added billing address: "
+msgstr " В заказе добавлен платежный адрес: "
+
+#: utils/activity-logger/activity-logger.php:18
+msgid " Order added billing postcode: "
+msgstr " Заказ добавил почтовый индекс для выставления счетов: "
+
+#: utils/activity-logger/activity-logger.php:19
+msgid " Order added billing phone: "
+msgstr " В заказе добавлен телефон для выставления счетов: "
+
+#: utils/activity-logger/activity-logger.php:20
+msgid " Order added billing email: "
+msgstr " Заказ добавил адрес электронной почты для выставления счетов: "
+
+#: utils/payment-complete-page/payment-complete-page-builder.php:8
+msgid "Payment completed"
+msgstr "Платеж завершен"
+
+#: utils/payment-complete-page/payment-complete-page-builder.php:9
+msgid "Thank you for purchase our product!!!"
+msgstr "Спасибо за покупку нашего товара!!!"
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:9
+msgid "Unsuccessful payment"
+msgstr "Неуспешная оплата"
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:10
+msgid "Your payment failed. Please try again or contact our support team if the problem continues to occur."
+msgstr "Ваш платеж не прошел. Пожалуйста, попробуйте еще раз или свяжитесь с нашей службой поддержки, если проблема не исчезнет."
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:12
+msgid "You can return to "
+msgstr "Вы можете вернуться к "
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:12
+msgid "Homepage"
+msgstr "Главная страница"
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:12
+msgid " and continue shopping."
+msgstr " и продолжить покупки."
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:21
+msgid "Unsuccessful payment page"
+msgstr "Страница неуспешной оплаты"
+
+#: vb-payment-plugin.php:46
+msgid "Settings"
+msgstr "Настройки"
+
+#: vb-payment-plugin.php:57
+msgid "Victoriabank payments settings"
+msgstr "Victoriabank настройка платежей"
+
+#: vb-payment-plugin.php:58
+msgid "VB payments settings"
+msgstr "VB настройка платежей"
+
+#: vb-payment-plugin.php:74 vb-payment-plugin.php:82
+msgid "Merchant data"
+msgstr "Данные продавца"
+
+#: vb-payment-plugin.php:75 vb-payment-plugin.php:88
+msgid "Connection settings"
+msgstr "Настройки соединения"
+
+#: vb-payment-plugin.php:76
+msgid "Notification settings"
+msgstr "Настройка уведомлений"
+
+#: vb-payment-plugin.php:94
+msgid "Notification of payments"
+msgstr "Уведомление о платежах"
+
+#: vb-payment-plugin.php:101
+msgid "Payment settings"
+msgstr "Настройки платежей"
+
+#: vb-payment-plugin.php:278 vb-payment-plugin.php:280
+msgid " Transaction \""
+msgstr " Транзакция \""
+
+#: vb-payment-plugin.php:278
+msgid "\" was made successfully"
+msgstr "\" была выполнена успешно"
+
+#: vb-payment-plugin.php:280
+msgid "\" wasn't finalized successfully"
+msgstr "\" не была завершена успешно"
+
+#: vb-payment-plugin.php:281
+msgid " Response code value : "
+msgstr " Значение кода ответа: "
+
+#: vb-payment-plugin.php:283
+msgid " Action status : "
+msgstr " Статус действия : "
+
+#: vb-payment-plugin.php:545
+msgid ": New order #"
+msgstr ": Новый заказ #"
+
+#: vb-payment-plugin.php:550
+msgid "Date of transaction"
+msgstr "Дата транзакции"
+
+#: vb-payment-plugin.php:551
+msgid "Retrieval Reference Number (RRN)"
+msgstr "Справочный номер поиска (RRN)"
+
+#: vb-payment-plugin.php:552
+msgid "Authorization code"
+msgstr "Код авторизации"
+
+#: vb-payment-plugin.php:553
+msgid "Card number"
+msgstr "Номер карты"
+
+#: vb-payment-plugin.php:559
+msgid "Congratulations on the sale. You are welcome to"
+msgstr "Поздравляем с покупкой. Добро пожаловать в"
+
+#: vb-payment-plugin.php:560
+msgid ")<br><br> If you aren't satisfied in good quality you can return it by this "
+msgstr ")<br><br> Если вас не устраивает качество товара, вы можете вернуть его по этой "
+
+#: vb-payment-plugin.php:560
+msgid "return/refund policy"
+msgstr "политике возврата"
+
+#: vb-payment-plugin.php:561
+msgid ".<br><br> Also if you need another help contact us - <b>"
+msgstr ".<br><br> Также, если вам нужна дополнительная помощь, свяжитесь с нами - <b>"
+
+#: vb-payment-plugin.php:562
+msgid ""
+"<b>.<br><br> Process your orders on the go. <a href=\"https://woocommerce.com/"
+"mobile\">Get the app</a>"
+msgstr ""
+"<b>.<br><br> Обрабатывайте заказы на ходу. <a href=\"https://woocommerce.com/"
+"mobile\">Получить приложение</a>"
+
+#: vb-payment-plugin.php:567
+msgid " Email was sent to customer"
+msgstr " Электронное письмо было отправлено покупателю на почту"
+
+#: utils/email/order-refunded.php:26
+msgid "Hi %s,"
+msgstr "Привет %s,"
+
+#: utils/email/order-refunded.php:32
+msgid "Your order on %s has been partially refunded. There are more details below for your reference:"
+msgstr "Ваш заказ на %s был частично возмещен. Более подробная информация приведена ниже для справки:"
+
+#: utils/email/order-refunded.php:35
+msgid "Your order on %s has been refunded. There are more details below for your reference:"
+msgstr "Ваш заказ на %s был возвращен. Более подробная информация приведена ниже для справки:"

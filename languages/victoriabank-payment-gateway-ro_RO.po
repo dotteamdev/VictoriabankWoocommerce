@@ -1,0 +1,474 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-05-26 04:07+0300\n"
+"PO-Revision-Date: 2023-05-29 14:22+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==0 || (n!=1 && n%100>=1 && "
+"n%100<=19) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: forms\n"
+"X-Poedit-SearchPath-1: payment-types\n"
+"X-Poedit-SearchPath-2: utils\n"
+"X-Poedit-SearchPath-3: vb-payment-plugin.php\n"
+
+msgid "Bon electronic"
+msgstr "Bon electronic"
+
+#: forms/connection-form.php:3
+msgid "Public key"
+msgstr "Cheie publică"
+
+#: forms/connection-form.php:7
+msgid "Bank public key"
+msgstr "Cheia publică a băncii"
+
+#: forms/connection-form.php:11
+msgid "Private key"
+msgstr "Cheie privată"
+
+#: forms/connection-form.php:15
+msgid "Private Key Password"
+msgstr "Parolă cheie privată"
+
+#: forms/connection-form.php:19
+msgid "Encryption method"
+msgstr "Metoda de criptare"
+
+#: forms/connection-form.php:30 forms/merchant-form.php:23
+#: forms/notification-form.php:7
+msgid "Submit"
+msgstr "Salvează"
+
+#: forms/manually-process-form.php:2
+msgid "Manually process callback data"
+msgstr "Procesează manual datele de apel invers"
+
+#: forms/manually-process-form.php:39
+msgid "Process"
+msgstr "Procesează"
+
+#: forms/manually-process-form.php:83 vb-payment-plugin.php:317
+msgid " Transaction \"Sales completion\" was made successfully"
+msgstr " Tranzacția \"Sales completion\" a fost realizată cu succes"
+
+#: forms/manually-process-form.php:86 vb-payment-plugin.php:321
+msgid " Transaction \"Refund\" was made successfully"
+msgstr " Tranzacția \"Refund\" a fost realizată cu succes"
+
+#: forms/manually-process-form.php:128 vb-payment-plugin.php:367
+msgid " Error: "
+msgstr " Eroarea: "
+
+#: forms/manually-process-form.php:130
+msgid "Transaction failed"
+msgstr "Tranzacția a eșuat"
+
+#: forms/manually-process-form.php:136
+msgid "Transaction was made successfully, you can check result on the email"
+msgstr "Tranzacția a fost efectuată cu succes, puteți verifica rezultatul pe e-mail"
+
+#: forms/merchant-form.php:3
+msgid "Merchant name"
+msgstr "Numele comerciantului"
+
+#: forms/merchant-form.php:7
+msgid "Merchant URL"
+msgstr "Adresa URL a comerciantului"
+
+#: forms/merchant-form.php:11
+msgid "Merchant address"
+msgstr "Adresa comerciantului"
+
+#: forms/merchant-form.php:15
+msgid "Return/refund policy URL"
+msgstr "Adresa URL a politicii de returnare/rambursare"
+
+#: forms/merchant-form.php:19
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:11
+msgid "Customer service contact"
+msgstr "Contact pentru serviciul clienți"
+
+#: forms/notification-form.php:4
+msgid "Callback URL"
+msgstr "Callback URL"
+
+#: forms/payment-settings-form.php:3
+msgid "Logo for Visa/Mastercard"
+msgstr "Sigla pentru Visa/Mastercard"
+
+#: forms/payment-settings-form.php:7
+msgid "Logo for Star Card Rate"
+msgstr "Sigla pentru Star Card Rate"
+
+#: forms/payment-settings-form.php:11
+msgid "Logo for Puncte Star"
+msgstr "Sigla pentru Puncte Star"
+
+#: payment-types/vb-puncte-star.php:18
+msgid "WooCommerce Payment Gateway for Victoriabank Puncte Star"
+msgstr "Poarta de plată WooCommerce pentru Victoriabank Puncte Star"
+
+#: payment-types/vb-puncte-star.php:42 payment-types/vb-star-card-rate.php:43
+#: payment-types/vb-visa-master.php:42
+msgid "Activate/Deactivate"
+msgstr "Activare/dezactivare"
+
+#: payment-types/vb-puncte-star.php:45 payment-types/vb-star-card-rate.php:46
+#: payment-types/vb-visa-master.php:45
+msgid "Check box activate this payment method"
+msgstr "Bifați caseta pentru a activa această metodă de plată"
+
+#: payment-types/vb-puncte-star.php:49 payment-types/vb-star-card-rate.php:50
+#: payment-types/vb-visa-master.php:49
+msgid "Title"
+msgstr "Titlu"
+
+#: payment-types/vb-puncte-star.php:51 payment-types/vb-star-card-rate.php:60
+#: payment-types/vb-visa-master.php:51
+msgid "The title of the payment method shown to the customer during checkout"
+msgstr "Titlul metodei de plată afișat clientului în timpul plății"
+
+#: payment-types/vb-puncte-star.php:55 payment-types/vb-star-card-rate.php:64
+#: payment-types/vb-visa-master.php:55
+msgid "Description"
+msgstr "Descriere"
+
+#: payment-types/vb-puncte-star.php:57 payment-types/vb-star-card-rate.php:66
+#: payment-types/vb-visa-master.php:57
+msgid "Description of the payment method displayed to the customer during checkout"
+msgstr "Descrierea metodei de plată afișată clientului în timpul plății"
+
+#: payment-types/vb-puncte-star.php:61 payment-types/vb-star-card-rate.php:70
+#: payment-types/vb-visa-master.php:61
+msgid "Logo"
+msgstr "Logo"
+
+#: payment-types/vb-puncte-star.php:63 payment-types/vb-star-card-rate.php:72
+#: payment-types/vb-visa-master.php:64
+msgid "Logo of the payment method displayed to the customer during checkout"
+msgstr "Sigla metodei de plată afișată clientului în timpul plății"
+
+#: payment-types/vb-puncte-star.php:67 payment-types/vb-star-card-rate.php:76
+#: payment-types/vb-visa-master.php:68
+msgid "Terminal id"
+msgstr "ID terminalului"
+
+#: payment-types/vb-puncte-star.php:69 payment-types/vb-star-card-rate.php:78
+#: payment-types/vb-visa-master.php:70
+msgid "This is id of payment terminal"
+msgstr "Acesta este ID-ul terminalului de plată"
+
+#: payment-types/vb-puncte-star.php:73 payment-types/vb-star-card-rate.php:82
+#: payment-types/vb-visa-master.php:74
+msgid "Merchant id"
+msgstr "ID comerciantului"
+
+#: payment-types/vb-puncte-star.php:75 payment-types/vb-star-card-rate.php:84
+#: payment-types/vb-visa-master.php:76
+msgid "This is id of merchant"
+msgstr "Acesta este ID-ul comerciantului"
+
+#: payment-types/vb-puncte-star.php:79 payment-types/vb-star-card-rate.php:88
+#: payment-types/vb-visa-master.php:80
+msgid "Test mode"
+msgstr "Mod de testare"
+
+#: payment-types/vb-puncte-star.php:80 payment-types/vb-star-card-rate.php:89
+#: payment-types/vb-visa-master.php:81
+msgid "Enable Test Mode"
+msgstr "Activează mod de testare"
+
+#: payment-types/vb-puncte-star.php:83 payment-types/vb-star-card-rate.php:92
+#: payment-types/vb-visa-master.php:84
+msgid "Check box activate test mode"
+msgstr "Caseta de bifare pentru a activa această opțiune"
+
+#: payment-types/vb-puncte-star.php:87 payment-types/vb-star-card-rate.php:96
+#: payment-types/vb-visa-master.php:88
+msgid "Debug mode"
+msgstr "Mod de depanare"
+
+#: payment-types/vb-puncte-star.php:88 payment-types/vb-star-card-rate.php:97
+#: payment-types/vb-visa-master.php:89
+msgid "Enable Debug Mode"
+msgstr "Activează mod de depanare"
+
+#: payment-types/vb-puncte-star.php:91 payment-types/vb-star-card-rate.php:100
+#: payment-types/vb-visa-master.php:92
+msgid "Check box activate debug mode"
+msgstr "Caseta de bifare pentru a activa mod de depanare"
+
+#: payment-types/vb-puncte-star.php:95 payment-types/vb-star-card-rate.php:104
+#: payment-types/vb-visa-master.php:96
+msgid "Transaction type"
+msgstr "Tipul tranzacției"
+
+#: payment-types/vb-puncte-star.php:99 payment-types/vb-star-card-rate.php:108
+#: payment-types/vb-visa-master.php:100
+msgid "Authorization"
+msgstr "Autorizarea"
+
+#: payment-types/vb-puncte-star.php:100 payment-types/vb-star-card-rate.php:109
+#: payment-types/vb-visa-master.php:101
+msgid "Charge"
+msgstr "Taxa"
+
+#: payment-types/vb-puncte-star.php:102 payment-types/vb-star-card-rate.php:111
+#: payment-types/vb-visa-master.php:103
+msgid ""
+"Selects how payments will be processed. Charge immediately sends all transactions "
+"to the bank for settlement, Authorization only authorizes the order amount to the "
+"bank for later settlement."
+msgstr ""
+"Selectează modul în care vor fi procesate plățile. Taxa trimite imediat toate "
+"tranzacțiile către bancă pentru decontare, Autorizarea autorizează doar suma "
+"comenzii către bancă pentru decontare ulterioară."
+
+#: payment-types/vb-puncte-star.php:106 payment-types/vb-star-card-rate.php:115
+#: payment-types/vb-visa-master.php:107
+msgid "Order description"
+msgstr "Descrierea comenzii"
+
+#: payment-types/vb-puncte-star.php:108 payment-types/vb-star-card-rate.php:117
+#: payment-types/vb-visa-master.php:109
+msgid ""
+"Description of the order shown to the customer on the bank's page during payment"
+msgstr "Descrierea comenzii afișată clientului pe pagina băncii în timpul plății"
+
+#: payment-types/vb-star-card-rate.php:19
+msgid "WooCommerce Payment Gateway for Victoriabank Star Card Rate"
+msgstr "Poarta de plată WooCommerce pentru Victoriabank Star Card Rate"
+
+#: payment-types/vb-star-card-rate.php:54
+msgid "Pay 2 installments"
+msgstr "Plata in 2 rate"
+
+#: payment-types/vb-star-card-rate.php:55
+msgid "Pay 3 installments"
+msgstr "Plata in 3 rate"
+
+#: payment-types/vb-star-card-rate.php:56
+msgid "Pay 6 installments"
+msgstr "Plata in 6 rate"
+
+#: payment-types/vb-star-card-rate.php:57
+msgid "Pay 9 installments"
+msgstr "Plata in 9 rate"
+
+#: payment-types/vb-star-card-rate.php:58
+msgid "Pay 12 installments"
+msgstr "Plata in 12 rate"
+
+#: payment-types/vb-visa-master.php:18
+msgid "WooCommerce Payment Gateway for Victoriabank Visa/MasterCard"
+msgstr "Poarta de plată WooCommerce pentru Victoriabank Visa/MasterCard"
+
+#: utils/activity-logger/activity-log-page.php:5
+#: utils/activity-logger/activity-log-page.php:6
+msgid "Activity Log"
+msgstr "Jurnalul de activitate"
+
+#: utils/activity-logger/activity-log-page.php:59
+#: utils/activity-logger/activity-log-page.php:88
+#: utils/activity-logger/activity-log-page.php:117
+msgid "Activity"
+msgstr "Activitate"
+
+#: utils/activity-logger/activity-log-page.php:60
+#: utils/activity-logger/activity-log-page.php:89
+#: utils/activity-logger/activity-log-page.php:118
+msgid "Timestamp"
+msgstr "Timestamp-ul"
+
+#: utils/activity-logger/activity-log-page.php:74
+#: utils/activity-logger/activity-log-page.php:103
+#: utils/activity-logger/activity-log-page.php:132
+msgid "No log data for this payment type"
+msgstr "Nu există date de jurnal pentru acest tip de plată"
+
+#: utils/activity-logger/activity-log-page.php:141
+msgid "Previous"
+msgstr "Precedent"
+
+#: utils/activity-logger/activity-log-page.php:143
+msgid "Next"
+msgstr "Următor"
+
+#: utils/activity-logger/activity-logger.php:14
+msgid "Order created: #"
+msgstr "Comanda creată: #"
+
+#: utils/activity-logger/activity-logger.php:15
+msgid " Order added amount: "
+msgstr " Suma adăugată la comandă: "
+
+#: utils/activity-logger/activity-logger.php:16
+msgid " Order added billing name: "
+msgstr " Numele de facturare adăugat la comandă: "
+
+#: utils/activity-logger/activity-logger.php:17
+msgid " Order added billing address: "
+msgstr " Adresa de facturare adăugată la comandă: "
+
+#: utils/activity-logger/activity-logger.php:18
+msgid " Order added billing postcode: "
+msgstr " Cod poștal de facturare adăugat la comanda: "
+
+#: utils/activity-logger/activity-logger.php:19
+msgid " Order added billing phone: "
+msgstr " Telefon de facturare adăugat pentru comandă: "
+
+#: utils/activity-logger/activity-logger.php:20
+msgid " Order added billing email: "
+msgstr " E-mail de facturare adăugat pentru comandă: "
+
+#: utils/payment-complete-page/payment-complete-page-builder.php:8
+msgid "Payment completed"
+msgstr "Plata finalizată"
+
+#: utils/payment-complete-page/payment-complete-page-builder.php:9
+msgid "Thank you for purchase our product!!!"
+msgstr "Vă mulțumim pentru achiziționarea produsului nostru!!!"
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:9
+msgid "Unsuccessful payment"
+msgstr "Plată nereușită"
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:10
+msgid "Your payment failed. Please try again or contact our support team if the problem continues to occur."
+msgstr "Plata dvs. a eșuat. Vă rugăm să încercați din nou sau să contactați echipa noastră de asistență dacă problema continuă să apară."
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:12
+msgid "You can return to "
+msgstr "Te poți întoarce la "
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:12
+msgid "Homepage"
+msgstr "Pagina principala"
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:12
+msgid " and continue shopping."
+msgstr " și continuați cumpărăturile."
+
+#: utils/unsuccessful-payment-page/unsuccessful-payment-page-builder.php:21
+msgid "Unsuccessful payment page"
+msgstr "Pagina de plată nereușită"
+
+#: vb-payment-plugin.php:46
+msgid "Settings"
+msgstr "Setări"
+
+#: vb-payment-plugin.php:57
+msgid "Victoriabank payments settings"
+msgstr "Setări de plăți Victoriabank"
+
+#: vb-payment-plugin.php:58
+msgid "VB payments settings"
+msgstr "Setări de plăți VB"
+
+#: vb-payment-plugin.php:74 vb-payment-plugin.php:82
+msgid "Merchant data"
+msgstr "Date comerciant-ului"
+
+#: vb-payment-plugin.php:75 vb-payment-plugin.php:88
+msgid "Connection settings"
+msgstr "Setări de conectare"
+
+#: vb-payment-plugin.php:76
+msgid "Notification settings"
+msgstr "Setări de notificare"
+
+#: vb-payment-plugin.php:94
+msgid "Notification of payments"
+msgstr "Notificarea plăților"
+
+#: vb-payment-plugin.php:101
+msgid "Payment settings"
+msgstr "Setările plăților"
+
+#: vb-payment-plugin.php:278 vb-payment-plugin.php:280
+msgid " Transaction \""
+msgstr " Tranzacție \""
+
+#: vb-payment-plugin.php:278
+msgid "\" was made successfully"
+msgstr "\" a fost realizat cu succes"
+
+#: vb-payment-plugin.php:280
+msgid "\" wasn't finalized successfully"
+msgstr "\" a fost realizat cu succes"
+
+#: vb-payment-plugin.php:281
+msgid " Response code value : "
+msgstr " Valoarea codului de răspuns: "
+
+#: vb-payment-plugin.php:283
+msgid " Action status : "
+msgstr " Starea acțiunii: "
+
+#: vb-payment-plugin.php:545
+msgid ": New order #"
+msgstr ": Comandă nouă #"
+
+#: vb-payment-plugin.php:550
+msgid "Date of transaction"
+msgstr "Data tranzactiei"
+
+#: vb-payment-plugin.php:551
+msgid "Retrieval Reference Number (RRN)"
+msgstr "Numărul de referință pentru extragere (RRN)"
+
+#: vb-payment-plugin.php:552
+msgid "Authorization code"
+msgstr "Cod de autorizare"
+
+#: vb-payment-plugin.php:553
+msgid "Card number"
+msgstr "Numărul de card"
+
+#: vb-payment-plugin.php:559
+msgid "Congratulations on the sale. You are welcome to"
+msgstr "Felicitări pentru cumpărături. Sunteți binevenit la"
+
+#: vb-payment-plugin.php:560
+msgid ")<br><br> If you aren't satisfied in good quality you can return it by this "
+msgstr ")<br><br> Dacă nu sunteți mulțumit de calitatea produselor, îl puteți returna prin aceasta "
+
+#: vb-payment-plugin.php:560
+msgid "return/refund policy"
+msgstr "politica de returnare/rambursare"
+
+#: vb-payment-plugin.php:561
+msgid ".<br><br> Also if you need another help contact us - <b>"
+msgstr ".<br><br> De asemenea, dacă aveți nevoie de alt ajutor, contactați-ne - <b>"
+
+#: vb-payment-plugin.php:562
+msgid ""
+"<b>.<br><br> Process your orders on the go. <a href=\"https://woocommerce.com/"
+"mobile\">Get the app</a>"
+msgstr ""
+"<b>.<br><br> Procesați-vă comenzile din mers. <a href=\"https://woocommerce.com/"
+"mobile\">Descărcați aplicația</a>"
+
+#: vb-payment-plugin.php:567
+msgid " Email was sent to customer"
+msgstr " Email a fost transmis la cumpărător"
+
+#: utils/email/order-refunded.php:26
+msgid "Hi %s,"
+msgstr "Salut %s,"
+
+#: utils/email/order-refunded.php:32
+msgid "Your order on %s has been partially refunded. There are more details below for your reference:"
+msgstr "Comanda dvs. de pe %s a fost rambursată parțial. Mai multe detalii mai jos pentru referință:"
+
+#: utils/email/order-refunded.php:35
+msgid "Your order on %s has been refunded. There are more details below for your reference:"
+msgstr "Comanda dvs. de pe %s a fost rambursată. Mai multe detalii mai jos pentru referință:"
