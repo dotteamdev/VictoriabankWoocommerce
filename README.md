@@ -1,73 +1,158 @@
 # WooCommerce Victoriabank Payments
 
-Contributors: Victoriabank
+Contributors: Dan Oistric
 Tags: WooCommerce, Moldova, Victoriabank, VB, bank, payment, gateway, visa, mastercard, credit card
 Requires at least: 6.0
 Tested up to: 6.3.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 Requires PHP: 7.2
 License: GPLv3 or later
 License URI: <https://www.gnu.org/licenses/gpl-3.0.html>
 
-Plugin for Victoriabank payments on the WooCommerce shops.
+Plugin pentru plăți Victoriabank în magazinele WooCommerce.
 
-== Description ==
-The objective is to provide merchants with a template solution that together with a set of instructions will allow the merchant to easily connect to BC Victoriabank's payment system with 3 payment methods:
+== Descriere ==
+Scopul este să ofere comercianților o soluție template care împreună cu un set de instrucțiuni va permite comerciantului să se conecteze ușor la sistemul de plăți BC Victoriabank cu 3 metode de plată:
 
-1. **Visa/Mastercard Card (accepting all Visa or Mastercard Cards)**
-2. **Star Card Rate (accepting only Star Card issued by BC Victoriabank)**
-3. **Star Points (accepting only Star Card issued by BC Victoriabank)**
+1. **Card Visa/Mastercard (acceptă toate cardurile Visa sau Mastercard)**
+2. **Star Card Rate (acceptă doar cardurile Star emise de BC Victoriabank)**
+3. **Star Points (acceptă doar cardurile Star emise de BC Victoriabank)**
 
-The aim is to ease the process of integration into the payment system of BC Victoriabank.
+Scopul este să faciliteze procesul de integrare în sistemul de plăți BC Victoriabank.
 
-= Features =
+= Caracteristici =
 
-* `Authorization` and `Charge` card transaction types
-* `Reversal` transactions – partial or complete refunds
-* `Sales completion` transactions – complete authorized transactions
-* Order confirmation email with card transaction details
-* Free to use – [Open-source GPL-3.0 license on GitHub](https://github.com/cyberink-co/vb-payment-plugin)
+* Tipuri de tranzacții de card `Authorization` și `Charge`
+* Tranzacții `Reversal` – rambursări parțiale sau complete
+* Tranzacții `Sales completion` – finalizează tranzacțiile autorizate
+* Email de confirmare a comenzii cu detaliile tranzacției de card
+* Gratuit de utilizat – [Licență open-source GPL-3.0 pe GitHub](https://github.com/cyberink-co/vb-payment-plugin)
 
-= Getting Started =
+== Instalare Pas cu Pas ==
 
-* [Installation Instructions](./installation/)
-* [Frequently Asked Questions](./faq/)
+### Cerințe Preliminare
 
-== Installation ==
+* WordPress 6.0 sau mai nou
+* WooCommerce plugin instalat și activat
+* PHP 7.2 sau mai nou
+* Cont de comerciant la Victoriabank
 
-1. Upload the `vb-payment-plugin` folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in the WordPress admin panel.
-3. Configure the plugin settings under the 'Settings' section and WooCommerce Payments settings.
-4. After setup settings for payment methods will be needed to make one more step. Is needed to turn off default email templates from WooCommerce, for using email template from plugin. To make this will be need to go to tab `Emails` on WooCommerce settings and turn off templates - `New order`, `Processing order`, `Completed order`.
+### Pasul 1: Descărcarea Plugin-ului
 
-== Usage ==
-How to use the plugin and its main features.
+În acest repozitoriu găsiți fișierul `woocommerce-victoriabank-payments.zip` care conține plugin-ul WordPress complet pregătit pentru instalare.
 
-== Frequently Asked Questions ==
+### Pasul 2: Instalarea în WordPress
 
-= How can I configure the plugin settings? =
+**Metoda 1 - Prin interfața WordPress (Recomandat):**
 
-Configure the plugin settings under the 'VB payments settings' section in the *Settings* on the admin panel menu.
-After use the *WooCommerce > Settings > Payments > Victoriabank...* screens to configure the plugin for each payment method.
+1. Conectați-vă la panoul de administrare WordPress
+2. Navigați la **Plugins > Add New Plugin**
+3. Faceți clic pe **Upload Plugin**
+4. Selectați fișierul `woocommerce-victoriabank-payments.zip` din acest repozitoriu
+5. Faceți clic pe **Install Now**
+6. După instalare, faceți clic pe **Activate Plugin**
 
-= Where can I get the Merchant Data and Connection Settings? =
+**Metoda 2 - Manual prin FTP:**
 
-The merchant data and connection settings are provided by Victoriabank. This data is used by the plugin to connect to the Victoriabank payment gateway and process the card transactions.
+1. Extrageți conținutul fișierului `woocommerce-victoriabank-payments.zip`
+2. Încărcați folderul extras în directorul `/wp-content/plugins/` de pe serverul dumneavoastră
+3. În panoul de administrare WordPress, navigați la **Plugins > Installed Plugins**
+4. Găsiți "Victoriabank payment" și faceți clic pe **Activate**
 
-= What store settings are supported? =
+### Pasul 3: Generarea Cheilor RSA
 
-Victoriabank currently supports transactions in MDL (Moldovan Leu), EUR (Euro) and USD (United States Dollar).
+Pentru siguranța tranzacțiilor, plugin-ul necesită chei RSA publice și private. În acest repozitoriu găsiți utilitea `RSAKeyGenerator.exe` care vă va genera automat aceste chei.
 
-= What is the difference between transaction types? =
+**Utilizarea RSAKeyGenerator:**
 
-* **Charge** submits all transactions for settlement.
-* **Authorization** simply authorizes the order total for capture later. Change order status to *Completed* to settle the previously authorized transaction.
+1. Descărcați `RSAKeyGenerator.exe` din acest repozitoriu
+2. Executați aplicația pe computerul dumneavoastră Windows
+3. Aplicația va genera automat:
+   - **Cheia privată** (private key) - păstrați-o în siguranță, nu o distribuiți
+   - **Cheia publică** (public key) - aceasta va fi trimisă către Victoriabank
 
-= How can I manually process a bank transaction response callback data message received by email from the bank? =
+⚠️ **Important:** Păstrați cheia privată în siguranță și nu o distribuiți niciodată. Cheia publică va fi furnizată băncii pentru configurarea contului dumneavoastră.
 
-As part of the backup procedure Victoriabank payment gateway sends a duplicate copy of the transaction responses to a specially designated merchant email address specified during initial setup.
-If the automated response payment notification callback failed the shop administrator can manually process the transaction response message received from the bank.
-Go to the 'VB payments settings' section in the *Settings* on the admin panel menu, go to *Notification settings* section and paste the bank transaction response data as received in the email and click *Process*.
+### Pasul 4: Configurarea Plugin-ului
+
+1. În WordPress, navigați la **Settings > VB payments settings**
+2. Completați următoarele secțiuni:
+
+**Merchant Data:**
+- Merchant ID (furnizat de Victoriabank)
+- Terminal ID (furnizat de Victoriabank)
+- Alte date specifice comerciantului
+
+**Connection Settings:**
+- URL-urile de conectare (furnizate de Victoriabank)
+- Setările de mediu (Test/Production)
+
+**Payment Settings:**
+- Tipul de tranzacție (Authorization/Charge)
+- Setările pentru fiecare metodă de plată
+
+### Pasul 5: Configurarea Metodelor de Plată WooCommerce
+
+1. Navigați la **WooCommerce > Settings > Payments**
+2. Veți vedea următoarele metode de plată disponibile:
+   - **Victoriabank Visa/Mastercard**
+   - **Victoriabank Star Card Rate**  
+   - **Victoriabank Star Points**
+3. Activați și configurați fiecare metodă de plată după necesități
+
+### Pasul 6: Configurarea Email-urilor
+
+Pentru a utiliza șabloanele de email personalizate ale plugin-ului:
+
+1. Navigați la **WooCommerce > Settings > Emails**
+2. Dezactivați următoarele șabloane standard WooCommerce:
+   - **New order**
+   - **Processing order**
+   - **Completed order**
+
+### Pasul 7: Testarea
+
+1. Creați o comandă de test în magazinul dumneavoastră
+2. Selectați una dintre metodele de plată Victoriabank
+3. Verificați că redirecționarea către sistemul bancar funcționează corect
+4. Testați fluxul complet de plată
+
+### Pasul 8: Trecerea în Producție
+
+Când testarea este completă:
+
+1. Actualizați setările de conectare pentru mediul de producție
+2. Înlocuiți URL-urile de test cu cele de producție
+3. Verificați că toate datele comerciantului sunt corecte
+
+== Depanare ==
+
+### Probleme Comune
+
+**Plugin-ul nu apare după instalare:**
+- Verificați că WooCommerce este instalat și activat
+- Verificați versiunea PHP (minimum 7.2)
+
+**Erori la generarea cheilor RSA:**
+- Asigurați-vă că `RSAKeyGenerator.exe` rulează pe Windows
+- Verificați că aveți drepturi de administrator
+
+**Probleme de conectare la bancă:**
+- Verificați datele comerciantului
+- Verificați URL-urile de conectare
+- Contactați suportul Victoriabank
+
+== Suport ==
+
+Pentru suport tehnic:
+- Contactați echipa de suport Victoriabank
+- Consultați documentația tehnică furnizată de bancă
+- Verificați secțiunea de logging din plugin pentru detalii despre erori
+
+== Changelog ==
+
+= 1.1.0 =
+* Versiunea curentă cu toate caracteristicile implementate
 
 == Screenshots ==
 
